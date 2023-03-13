@@ -126,6 +126,7 @@ for (let i = 0; i <= cards.length -1; i++) {
     const element = document.createElement('i');
     element.classList.add('fa-solid');
     element.classList.add(cardElement.prefix + cardElement.name);
+    element.classList.add('icon');
 
     const cardWrapper = document.createElement('div');
     cardWrapper.classList.add('card');

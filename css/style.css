@@ -46,14 +46,21 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: lightgrey;
+    gap: 3rem 2rem;
+    padding: 1rem 1rem;
 }
 
 .card {
-    width: calc(100% / 5);
+    width: calc((100% / 5) - 4rem);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: white;
+    padding: 3rem 0;
+}
+
+.icon {
+    font-size: 40px;
 }
