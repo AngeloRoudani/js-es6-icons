@@ -123,8 +123,8 @@ const selectDom = document.getElementById('card-type');
 //ascoltatore di eventi select
 
 selectDom.addEventListener("change", function () {
-    let current;
-    containerDom.innerHTML = `${current}`
+    let current = "";
+    containerDom.innerHTML = current;
     
 
     if (selectDom.value == 'all') {
