@@ -150,7 +150,7 @@ const blueCards = cards.filter(element =>{
 });
 
 const greenCards = cards.filter(element =>{
-    if (element.color == 'blue') {
+    if (element.color == 'green') {
         return true
     } else {
         return false
@@ -158,7 +158,7 @@ const greenCards = cards.filter(element =>{
 });
 
 const orangeCards = cards.filter(element =>{
-    if (element.color == 'blue') {
+    if (element.color == 'orange') {
         return true
     } else {
         return false
@@ -169,7 +169,15 @@ const orangeCards = cards.filter(element =>{
 
 selectDom.addEventListener("change", function () {
 
-        
+        if (selectDom.value == 'all') {
+            return generateCard(cards);
+        } else if (selectDom.value == 'animal') {
+            return generateCard(orangeCards);
+        } else if (selectDom.value == 'vegetables') {
+            return generateCard(greenCards);
+        } else if (selectDom.value == 'user') {
+            return generateCard(blueCards);
+        }
 
     }
 );
