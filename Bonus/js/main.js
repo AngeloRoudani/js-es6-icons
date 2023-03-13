@@ -198,7 +198,7 @@ const orangeCards = cards.filter(element =>{
 //colori random
 
 function randomColor () {
-    const letterNumberArray = [a, b, c, d, e, f, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const letterNumberArray = 'abcdef0123456789';
     let newColor = '';
 
     for (let i = 0; i < 6; i++) {
@@ -207,6 +207,6 @@ function randomColor () {
     return newColor;
 }
 
-console.log(randomColor());
+
 
 
