@@ -118,23 +118,59 @@ const cards = [
 ];
 
 const containerDom = document.querySelector('.container_main');
+const selectDom = document.getElementById('card-type');
 
+//Funzione che genera  le card
+function generateCard (array) {
+    for (let i = 0; i <= array.length -1; i++) {
+        const cardElement = array[i];
 
-for (let i = 0; i <= cards.length -1; i++) {
-    const cardElement = cards[i];
+        const element = document.createElement('i');
+        element.classList.add('fa-solid');
+        element.classList.add(cardElement.prefix + cardElement.name);
+        element.classList.add('icon');
+        element.style.color = cardElement.color
 
-    const element = document.createElement('i');
-    element.classList.add('fa-solid');
-    element.classList.add(cardElement.prefix + cardElement.name);
-    element.classList.add('icon');
-    element.style.color = cardElement.color
+        const cardWrapper = document.createElement('div');
+        cardWrapper.classList.add('card');
+        cardWrapper.append(element);
+        cardWrapper.append(cardElement.name);
+        
+        containerDom.append(cardWrapper);
 
-    const cardWrapper = document.createElement('div');
-    cardWrapper.classList.add('card');
-    cardWrapper.append(element);
-    cardWrapper.append(cardElement.name);
-    
-    containerDom.append(cardWrapper);
-
+    }
 }
+//funzioni filtra colori
+const blueCards = cards.filter(element =>{
+    if (element.color == 'blue') {
+        return true
+    } else {
+        return false
+    }
+});
+
+const greenCards = cards.filter(element =>{
+    if (element.color == 'blue') {
+        return true
+    } else {
+        return false
+    }
+});
+
+const orangeCards = cards.filter(element =>{
+    if (element.color == 'blue') {
+        return true
+    } else {
+        return false
+    }
+});
+
+//ascoltatore di eventi select
+
+selectDom.addEventListener("change", function () {
+
+        
+
+    }
+);
 
