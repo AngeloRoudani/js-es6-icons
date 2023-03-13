@@ -171,16 +171,22 @@ function generateCard (array) {
 
 //funzioni filtra colori
 
+let newColorAlfa = randomColor ();
+let newColorBeta = randomColor ();
+let newColorGamma = randomColor ();
+
 const blueCards = cards.filter(element =>{
     if (element.color == 'blue') {
-        return true
+		element.color = `#${newColorAlfa}`;
+        return true;
     } else {
-        return false
+        return false;
     }
 });
 
 const greenCards = cards.filter(element =>{
     if (element.color == 'green') {
+		element.color = `#${newColorBeta}`;
         return true
     } else {
         return false
@@ -189,6 +195,7 @@ const greenCards = cards.filter(element =>{
 
 const orangeCards = cards.filter(element =>{
     if (element.color == 'orange') {
+		element.color = `#${newColorGamma}`;
         return true
     } else {
         return false

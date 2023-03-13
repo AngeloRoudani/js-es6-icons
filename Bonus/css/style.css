@@ -42,6 +42,7 @@ h3 {
 }
 
 .container_main {
+    min-height: calc(100vh - 110px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
