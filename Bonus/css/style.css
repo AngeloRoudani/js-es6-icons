@@ -53,10 +53,12 @@ h3 {
 
 .card {
     width: calc((100% / 5) - 4rem);
+    height: calc(100% / 5);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: -1;
     flex-direction: column;
     background-color: white;
     padding: 3rem 0;
