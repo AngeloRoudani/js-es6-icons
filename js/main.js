@@ -121,6 +121,7 @@ const containerDom = document.querySelector('.container_main');
 const selectDom = document.getElementById('card-type');
 
 //Funzione che genera  le card
+
 function generateCard (array) {
     for (let i = 0; i <= array.length -1; i++) {
         const cardElement = array[i];
@@ -140,7 +141,9 @@ function generateCard (array) {
 
     }
 }
+
 //funzioni filtra colori
+
 const blueCards = cards.filter(element =>{
     if (element.color == 'blue') {
         return true
@@ -168,15 +171,20 @@ const orangeCards = cards.filter(element =>{
 //ascoltatore di eventi select
 
 selectDom.addEventListener("change", function () {
+        let current = "";
 
         if (selectDom.value == 'all') {
-            return generateCard(cards);
+            current = generateCard(cards);
+
         } else if (selectDom.value == 'animal') {
-            return generateCard(orangeCards);
+            current = generateCard(orangeCards);
+
         } else if (selectDom.value == 'vegetables') {
-            return generateCard(greenCards);
+            current = generateCard(greenCards);
+
         } else if (selectDom.value == 'user') {
-            return generateCard(blueCards);
+            current = generateCard(blueCards);
+            
         }
 
     }
