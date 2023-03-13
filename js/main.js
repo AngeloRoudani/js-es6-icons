@@ -120,6 +120,33 @@ const cards = [
 const containerDom = document.querySelector('.container_main');
 const selectDom = document.getElementById('card-type');
 
+//ascoltatore di eventi select
+
+selectDom.addEventListener("change", function () {
+    let current;
+    containerDom.innerHTML = `${current}`
+    
+
+    if (selectDom.value == 'all') {
+        
+        current = generateCard(cards);
+
+    } else if (selectDom.value == 'animal') {
+        
+        current = generateCard(orangeCards);
+
+    } else if (selectDom.value == 'vegetables') {
+        
+        current = generateCard(greenCards);
+
+    } else if (selectDom.value == 'user') {
+        
+        current = generateCard(blueCards);
+
+    }
+}
+);
+
 //Funzione che genera  le card
 
 function generateCard (array) {
@@ -136,7 +163,7 @@ function generateCard (array) {
         cardWrapper.classList.add('card');
         cardWrapper.append(element);
         cardWrapper.append(cardElement.name);
-        
+
         containerDom.append(cardWrapper);
 
     }
@@ -168,25 +195,4 @@ const orangeCards = cards.filter(element =>{
     }
 });
 
-//ascoltatore di eventi select
-
-selectDom.addEventListener("change", function () {
-        let current = "";
-
-        if (selectDom.value == 'all') {
-            current = generateCard(cards);
-
-        } else if (selectDom.value == 'animal') {
-            current = generateCard(orangeCards);
-
-        } else if (selectDom.value == 'vegetables') {
-            current = generateCard(greenCards);
-
-        } else if (selectDom.value == 'user') {
-            current = generateCard(blueCards);
-            
-        }
-
-    }
-);
 
