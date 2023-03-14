@@ -133,15 +133,15 @@ selectDom.addEventListener("change", function () {
 
     } else if (selectDom.value == 'animal') {
         
-        current = generateCard(orangeCards);
+        current = generateCard(animalCards);
 
     } else if (selectDom.value == 'vegetables') {
         
-        current = generateCard(greenCards);
+        current = generateCard(vegCards);
 
     } else if (selectDom.value == 'user') {
         
-        current = generateCard(blueCards);
+        current = generateCard(userCards);
 
     }
 }
@@ -169,33 +169,27 @@ function generateCard (array) {
     }
 }
 
-//funzioni filtra colori
+//funzioni filtra type
 
-let newColorAlfa = randomColor ();
-let newColorBeta = randomColor ();
-let newColorGamma = randomColor ();
 
-const blueCards = cards.filter(element =>{
-    if (element.color == 'blue') {
-		element.color = `#${newColorAlfa}`;
+const animalCards = cards.filter(element =>{
+    if (element.type == 'animal') {
         return true;
     } else {
         return false;
     }
 });
 
-const greenCards = cards.filter(element =>{
-    if (element.color == 'green') {
-		element.color = `#${newColorBeta}`;
+const vegCards = cards.filter(element =>{
+    if (element.type == 'vegetable') {
         return true
     } else {
         return false
     }
 });
 
-const orangeCards = cards.filter(element =>{
-    if (element.color == 'orange') {
-		element.color = `#${newColorGamma}`;
+const userCards = cards.filter(element =>{
+    if (element.type == 'user') {
         return true
     } else {
         return false
